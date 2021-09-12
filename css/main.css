@@ -1,0 +1,528 @@
+/* Noto Sans */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+/* Nexon Gothic Nomal */
+@font-face {
+    font-family: 'NEXON Lv1 Gothic OTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Nexon Gothic Bold */
+@font-face {
+    font-family: 'NEXON Lv1 Gothic OTF Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+* { margin: 0; padding: 0;}
+html, body { font-family: 'Noto Sans KR', sans-serif; background-color: #F6F6F6;}
+li { list-style: none; }
+a { display: block; text-decoration: none; color: #212121; }
+img { width: 100%; }
+
+
+/* fullpage 네비게이션 */
+#fp-nav ul li .fp-tooltip { color: #212121; }
+#fp-nav ul li a span {
+    background-color: #51C4D3;
+}
+
+.wrap {
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2vw;
+    margin-top: 2vw;
+    color: #212121;
+}
+
+header {
+    width: 100vw;
+    height: 11.5vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    margin: 0vw 5vw;
+    background-color: #F6F6F6;
+}
+
+header .logo {
+    width: 5vw;
+    margin: 1vw;
+}
+
+header nav {
+    margin: 2.5vw 15vw 0;
+    width: 50vw;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav ul li {
+    
+}
+
+header nav ul li a {
+    font-size: 1vw;
+}
+
+header nav ul li a:hover {
+    color: #0c73b8;
+    transition: all 0.5s;
+}
+
+header .mo_btn {
+    display: none;
+}
+
+header .mo_nav {
+    display: none;
+}
+
+.box {
+    width: 85vw;
+    height: 70vh;
+    margin: 0 auto;
+    margin-top: 3vw;
+    border: 1px solid #333;
+    /* background: #ddd; */
+}
+
+
+/* intro */
+
+.s1 {
+    text-align: center;
+}
+.typing-mid-txt {
+    display: none;
+    
+}
+
+.typing-front-txt {
+    font-size: 4vw;
+}
+
+.typeing-txt ul { 
+    list-style: none;
+}
+
+.typing {  
+    display: inline; 
+    animation-name: cursor; 
+    animation-duration: 0.3s; 
+    animation-iteration-count: infinite; 
+    font-size: 6vw;
+    line-height:1;
+} 
+
+@keyframes cursor{ 
+    0%{border-right: 1px solid #fff} 
+    50%{border-right: 1px solid #000} 
+    100%{border-right: 1px solid #fff} 
+}
+
+@keyframes cursor{ 
+    0%{border-right: 1px solid #fff} 
+    50%{border-right: 1px solid #000} 
+    100%{border-right: 1px solid #fff} 
+}
+
+
+/* about */
+.s2 .box {
+    display: flex;
+    justify-content: space-between;
+    padding: 3vw;
+    box-sizing: border-box;
+}
+
+.s2 .box > div {
+    width: 47%;
+}
+
+.s2 .box .profile {
+    opacity: 0;
+    
+}
+
+.s2 .box .profile.active {
+    opacity: 1;
+    transition: all 1s;
+    transition-delay: 0s;
+}
+
+.s2 .box .profile h3 {
+    color: #0c73b8;
+    text-align: center;
+    font-size: 1.3vw;
+    margin-bottom: 2vw;
+}
+
+.s2 .box .profile .profile_box ul li {
+    padding: 0.5vw;
+}
+
+.s2 .box .profile .profile_box ul li span {
+    font-weight: 900;
+}
+
+
+/* SKILL */
+
+.s2 .box .skill {
+    opacity: 0;
+    
+}
+
+.s2 .box .skill.active {
+    opacity: 1;
+    transition: all 0.5s;
+    transition-delay: 0.5s;
+}
+
+.s2 .box .skill h3 {
+    color: #0c73b8;
+    text-align: center;
+    font-size: 1.3vw;
+    /* margin-bottom: 2vw; */
+}
+
+.s2 .bar {
+    width: 100%;
+    height: 35px;
+    background: #fff;
+    border-radius: 5px;
+    position: relative;
+    transition: all 0.5s linear;
+}
+
+.s2 .title {
+    text-align: left;
+    /* width: 50%; */
+}
+
+.s2 .bar-1,
+.s2 .my-skills {
+    width: 80%;
+    margin: 0vw 1vw 0.5vw 1vw;
+}
+
+.s2 .bar-inner {
+    width: 0;
+    height: 35px;
+    line-height: 35px;
+    background: #db3a34;
+    border-radius: 5px 0 0 5px;
+}
+
+.s2 .bar-percent {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 1vw;
+}
+
+
+/* Portpolio */
+/* swiper slide */
+
+.s3 .box {
+    position: relative;
+}
+
+.s3 .box .swiper {
+    width: 95%;
+    margin: 0 auto;
+    overflow: hidden;
+    font-family: 'NEXON Lv1 Gothic OTF';
+    transform: scale(0.5,0);
+}
+
+.s3 .box .swiper.active {
+    transform: scale(1,1);
+    transition: all 1s;
+}
+
+.s3 .box .swiper .swiper-slide {
+    display: flex;
+    padding: 2.5vw 0vw;
+    box-sizing: border-box;
+}
+
+.s3 .box .swiper .swiper-slide > div {
+    margin-left: 5vw;
+}
+
+.s3 .box .swiper .swiper-slide .mega_image {
+    width: 25%;
+    background-image: url(../img/portpolio2_mega1.png);
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.s3 .box .swiper .swiper-slide .mega_image2 {
+    width: 22%;
+    margin-left: 1.5vw;
+    background-image: url(../img/portpolio2_mega2.png);
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.s3 .box .swiper .swiper-slide .swiper-des {
+    margin-left: 8vw;
+}
+
+.s3 .box .swiper .swiper-slide .des2 {
+    margin-left: 4vw;
+}
+
+.s3 .box .swiper .swiper-slide .swiper-des h2 {
+    font-size: 1.6vw;
+    color: #0c73b8;
+    font-family: 'NEXON Lv1 Gothic OTF Bold';
+}
+
+.s3 .box .swiper .swiper-slide .swiper-des .swiper-des-detail h3 {
+    font-size: 1.3vw;
+}
+
+.s3 .box .swiper .swiper-slide .swiper-des .swiper-des-detail .line {
+    padding-bottom: 0.5vw;
+} 
+
+.s3 .box .swiper .swiper-slide .swiper-des .swiper-des-detail .line span {
+    font-family: 'NEXON Lv1 Gothic OTF Bold';
+}
+
+.s3 .box .swiper .swiper-slide .swiper-des .swiper-des-detail .line h3 {
+    margin-bottom: 1vw;
+    margin-top: 1.5vw;
+}
+
+.s3 .box .swiper .swiper-slide .swiper-des .swiper-des-detail .l1 {
+    padding-top: 2vw;
+}
+
+.s3 .box .swiper .swiper-slide .swiper-des .swiper-des-detail .l2,
+.s3 .box .swiper .swiper-slide .swiper-des .swiper-des-detail .l3 {
+    line-height: 1.5vw;
+}
+
+.s3 .box .swiper .swiper-slide .swiper-des .swiper-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 1vw;
+}
+
+.s3 .box .swiper .swiper-slide .swiper-des .swiper-btn a {
+    width: 5.3vw;
+    height: 1.5vw;
+    background-color: #0c73b8;
+    color: #F6F6F6;
+    border:1px solid transparent;
+    border-radius: 30px;
+    text-align: center;
+    line-height: 1.5vw;
+    font-size: 0.9vw;
+    padding: 0.3vw;
+    margin-right: 1vw;
+}
+
+.s3 .box .swiper .swiper-slide .swiper-des .swiper-btn a:hover {
+    border: 1px solid #0c73b8;
+    color: #0c73b8;
+    background-color: transparent;
+}
+
+.s3 .box .swiper .swiper-slide .swiper-des .swiper-btn a:first-child {
+    background-color: #212121;
+    color: #F6F6F6;
+    border:1px solid transparent;
+}
+
+.s3 .box .swiper .swiper-slide .swiper-des .swiper-btn a:first-child:hover {
+    color: #212121;
+    border: 1px solid #212121;
+    background-color: transparent;
+}
+
+.s3 .box .swiper .swiper-slide .swiper-des .swiper-btn  .renewal-pc-btn {
+    width: 7.5vw;
+}
+
+.s3 .box .swiper .swiper-slide .swiper-des .swiper-btn .renewal-mo-btn {
+    width: 9vw;
+}
+
+.s3 .box .swiper .swiper-slide .swiper-des .swiper-btn .renewal-sub-btn {
+    width: 7.7vw;
+}
+
+.s3 .box .swiper .swiper-slide .swiper-des .swiper-btn .renewal-tablet-btn {
+    width: 9vw;
+}
+
+/* Design */
+
+.s4 .box .design {
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.s4 .box .design ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 0vw 1.5vw;
+}
+
+.s4 .box .design ul li {
+    width: 15vw;
+    font-family: 'NEXON Lv1 Gothic OTF';
+    text-align: center;
+    box-sizing: border-box;
+    transition: all 0.5s ease;
+    margin-top: 100vh;
+    line-height: 1.5vw;
+}
+
+.s4 .box .design ul li.active {
+    margin-top: 5vw;
+}
+
+.s4 .box .design ul li .design-img {
+    width: 100%;
+    height: 19vh;
+    background-color: khaki;
+    margin-bottom: 2vw;
+}
+
+.s4 .bbbox .design ul li .design-des {
+    border: 1px solid #999;
+    box-sizing: border-box;
+    padding: 2vw 1vw;
+    line-height: 2vw;
+}
+
+.s4 .box .design ul li .design-des a {
+    font-family: 'NEXON Lv1 Gothic OTF';
+    padding: 0.1vw;
+    font-size: 0.7vw;
+    border: 1px solid #fff;
+    background-color: #111;
+    color: #fff;
+    border-radius: 30px;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 1.5vw;
+}
+
+.s4 .box .design ul li .design-des a:hover {
+    background-color: #999;
+    color: #212121;
+    border: 1px solid #0c73b8;
+}
+
+.main_image {
+    width:48%;
+    display:inline-block;
+    border:3px solid #eee;
+}
+
+.main_image img {
+    width:100%;
+}
+
+.selection_image {
+    width:48%;
+    display:inline-block;
+}
+
+/* popup */
+.popup {
+    position: absolute;
+    display: none;
+    width: 90vw;
+    height: 80vh;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: rgba(0,0,0,0.9);
+    z-index: 200;
+}
+
+.popup .container {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.popup .container img {
+    width: initial; /* 원래 크기 */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.popup .prev,
+.popup .next {
+    width: 19px;
+    height: 62px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.popup .prev {
+    left: 20px;
+}
+
+.popup .next {
+    right: 20px;
+}
+
+.popup .close {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 20px;
+    right: 20px;
+}
+
+/* Contact */
+
+.introduction {
+    width: 50%;
+}
+
+.form-elements {
+    margin: 3vw;
+}
+
+.form-elements .pure-group {
+    width: 1vw;
+}
+
+.form-elements .pure-right {
+    width: 100vw;
+}
+
+
+
+
