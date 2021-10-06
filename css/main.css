@@ -377,150 +377,133 @@ header .mo_nav {
     width: 9vw;
 }
 
+
 /* Design */
 
-.s4 .box .design {
-    width: 100%;
-    height: 60vh;
+
+.line_gallery {
+    width:1200px;
+    height:655px;
+    margin:0 auto;
+    position: relative;
     overflow: hidden;
 }
 
-.s4 .box .design ul {
-    display: flex;
-    justify-content: space-between;
-    margin: 0vw 1.5vw;
-}
-
-.s4 .box .design ul li {
-    width: 15vw;
-    font-family: 'NEXON Lv1 Gothic OTF';
-    text-align: center;
-    box-sizing: border-box;
-    transition: all 0.5s ease;
-    margin-top: 100vh;
-    line-height: 1.5vw;
-}
-
-.s4 .box .design ul li.active {
-    margin-top: 5vw;
-}
-
-.s4 .box .design ul li .design-img {
-    width: 100%;
-    height: 19vh;
-    background-color: khaki;
-    margin-bottom: 2vw;
-}
-
-.s4 .bbbox .design ul li .design-des {
-    border: 1px solid #999;
-    box-sizing: border-box;
-    padding: 2vw 1vw;
-    line-height: 2vw;
-}
-
-.s4 .box .design ul li .design-des a {
-    font-family: 'NEXON Lv1 Gothic OTF';
-    padding: 0.1vw;
-    font-size: 0.7vw;
-    border: 1px solid #fff;
-    background-color: #111;
-    color: #fff;
-    border-radius: 30px;
-    width: 60%;
-    margin: 0 auto;
-    margin-top: 1.5vw;
-}
-
-.s4 .box .design ul li .design-des a:hover {
-    background-color: #999;
-    color: #212121;
-    border: 1px solid #0c73b8;
-}
-
-.main_image {
-    width:48%;
-    display:inline-block;
-    border:3px solid #eee;
-}
-
-.main_image img {
-    width:100%;
-}
-
-.selection_image {
-    width:48%;
-    display:inline-block;
-}
-
-/* popup */
-.popup {
+.line_gallery .line_gallery_box {
     position: absolute;
-    display: none;
-    width: 90vw;
-    height: 80vh;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    background-color: rgba(0,0,0,0.9);
+    top:0;
+    left:0;
+}
+
+.line_gallery .line_gallery_box .line {
+    width:100%;
+    display: flex;
+    /* background-color: #111; */
+}
+
+.line_gallery .line_gallery_box .line div {
+    width:300px;
+    height:180px;
+    overflow:hidden;
+    cursor:pointer;
+    opacity: 0.3;
+}
+
+/* .line_gallery .line_gallery_box .line1 .item:nth-child(3) {
+    width: 50vw;
+} */
+
+.popup {
+    display:none;
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    left:0;
     z-index: 200;
+    background-color:rgba(0,0,0,1);
 }
 
 .popup .container {
-    width: 100%;
-    height: 100%;
-    text-align: center;
+    width:100%;
+    height:100%;    
 }
 
 .popup .container img {
-    width: initial; /* 원래 크기 */
+    position:absolute;
+    width:initial;
+    height: 100%;
+    left:50%;
+    top:50%;
+    transform:translateX(-50%) translateY(-50%);
+}
+
+.popup .popup_prev,
+.popup .popup_next,
+.popup .popup_close {
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
 }
 
-.popup .prev,
-.popup .next {
-    width: 19px;
-    height: 62px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+.popup .popup_prev,
+.popup .popup_next {
+    width:20px;
+    height:62px;
+    top:50%;
+    transform:translateY(-50%);
 }
 
-.popup .prev {
-    left: 20px;
+.popup .popup_prev {
+    left:30px;
 }
 
-.popup .next {
-    right: 20px;
+.popup .popup_next {
+    right:30px;
 }
 
-.popup .close {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    top: 20px;
-    right: 20px;
+.popup .popup_close {
+    top:30px;
+    right:30px;
+    width:50px;
+    height:50px;
 }
 
 /* Contact */
 
-.introduction {
+.s5 .contact {
+    display: flex;
+}
+
+.s5 .contact > div {
     width: 50%;
+    margin: 1.5vw 2.5vw;
+}
+
+.s5 .introduction-img {
+    width: 10vw;
+    margin: 0 auto;
+    padding-top: 2vw;
+}
+
+.s5 .introduction-txt {
+    margin: 2vw 4vw;
 }
 
 .form-elements {
-    margin: 3vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 }
 
-.form-elements .pure-group {
-    width: 1vw;
-}
-
+.form-elements .pure-group,
 .form-elements .pure-right {
-    width: 100vw;
+    text-align: center;
+}
+
+.form-elements .pure-group #name,
+.form-elements .pure-group #message,
+.form-elements .pure-right #email {
+    width: 100%;
+    margin-top: 1vw;
 }
 
 

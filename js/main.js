@@ -142,45 +142,68 @@ function typing(){
     });
 
 
-    // popup gallery
-    var imgBtn = $('.s4 .box .design ul li .design-des a')
-    var gallTotal = $('.s4 .box .disign ul li').length;
-    var popup = $('.popup');
-    var container = $('.popup .container');
-    var gallNum = 0;
-    imgBtn.click(function(e) {
-        e.preventDefault();
-        // 마우스로 클릭한 a 태그의 href 속성 값을 가져와서 attr 변수에 저장
-        var attr = $(this).attr('href');
-        console.log(attr);
-        // <img src="img/gallert1.jpg"> 문장을 완성해서 container 영역에 자식객체로 추가시킴
-        container.append('<img src="'+attr+'">');
-        popup.css('display', 'block')
-        gallNum = $(this).parents('li').index()+1;
-        console.log(gallNum);
-    });
-
-    // popup gallery next btn
-    $('.popup .next').click(function() {
-        gallNum++;
-        if (gallNum >= gallTotal) { gallNum = 1; }
-        container.empty();
-        container.append('<img src="img/gallery'+gallNum+'.jpg');
-    });
-
-    // popup gallery prev btn
-    $('.popup .prev').click(function() {
-        gallNum--;
-        if (gallNum < 1) { gallNum = gallTotal; }
-        container.empty();
-        container.append('<img src="img/gallery'+gallNum+'.jpg');
-    });
-
-    // popup gallery close btn
-    $('.close').click(function() {
-        popup.css('display', 'none');
-        // 컨테이너 안의 내용 비움
-        container.empty();
+    $(function(){
+        var gall=$('.line_gallery');
+        var gallBox=$('.line_gallery .line_gallery_box');
+        var gallHeight=gallBox.find('.item').height();
+        var item=gallBox.find('.item');
+        var gallNum=0;
+        var gallTotal=item.length;
+        var timer=null;
+        //console.log(gallTotal);
+        //gallBox.css('top',-gallHeight);
+        gallBox.find('.line:nth-child(2) .item').css('opacity',1);
+    
+        setTimeout(timerfn,5000);
+        function timerfn(){
+            gallMove();
+            timer=setTimeout(timerfn,5000);
+        }
+        function gallMove(){       
+            gallBox.animate({'top':'-='+gallHeight}, 700, function(){
+                gallBox.find('.line').first().appendTo(gallBox);
+                gallBox.css('top',0);
+                gallBox.find('.line .item').css('opacity',0.3);
+                gallBox.find('.line:nth-child(2) .item').css('opacity',1);
+            });        
+        }
+        gall.mouseover(function(){
+            clearTimeout(timer);
+        });
+        gall.mouseout(function(){
+            timer=setTimeout(timerfn,1000);
+        });
+        item.click(function(){
+            var itemData=$(this).attr('data');
+            gallNum=itemData;
+            console.log(itemData);
+            $('.popup .container').append('<img src="img/gallery'+itemData+'.jpg">');
+            $('.popup').show();
+            $('.popup .container').fadeIn();
+        });
+        $('.popup_prev').click(function(){
+            gallNum--;
+            if(gallNum<1){
+                gallNum=gallTotal;
+            }
+            $('.popup .container').empty();
+            $('.popup .container').append('<img src="img/gallery'+gallNum+'.jpg">');
+            $('.popup').show();
+            $('.popup .container').fadeIn();
+        });
+        $('.popup_next').click(function(){
+            gallNum++;
+            if(gallNum>gallTotal){
+                gallNum=1;
+            }
+            $('.popup .container').empty();
+            $('.popup .container').append('<img src="img/gallery'+gallNum+'.jpg">');
+            $('.popup').show();
+        });
+        $('.popup_close').click(function(){
+            $('.popup .container').empty();
+            $('.popup').hide();
+        });
     });
     
 });
