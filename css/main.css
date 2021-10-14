@@ -200,7 +200,10 @@ header .mo_nav {
 }
 
 .s2 .box .profile .profile_box ul li span {
+  display: block;
   font-weight: 900;
+  font-size: 1vw;
+  margin-bottom: 0.5vw;
 }
 
 /* SKILL */
